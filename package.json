@@ -1,0 +1,33 @@
+{
+  "name": "ezreal-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ezreal — bot Discord francophone qui suit un joueur League of Legends et publie une analyse de ses parties.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc -p tsconfig.json",
+    "deploy-commands": "tsx src/discord/deploy.ts",
+    "demo": "tsx src/demo.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0",
+    "better-sqlite3": "^11.10.0",
+    "discord.js": "^14.27.0",
+    "dotenv": "^16.6.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.15.3",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^2.1.9"
+  }
+}

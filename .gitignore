@@ -1,0 +1,26 @@
+# Dépendances
+node_modules/
+
+# Build
+dist/
+
+# Secrets — ne JAMAIS committer
+.env
+.env.*
+!.env.example
+
+# Base de données locale
+data/
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Logs / divers
+*.log
+npm-debug.log*
+.DS_Store
+coverage/
+.vitest/
