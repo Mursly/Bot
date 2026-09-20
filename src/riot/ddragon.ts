@@ -20,7 +20,7 @@ const CDN_BASE = 'https://ddragon.leagueoflegends.com/cdn';
  * sur le patch courant ; les portraits des champions déjà sortis restent servis,
  * ce qui suffit pour ne jamais casser l'affichage.
  */
-const FALLBACK_VERSION = '15.18.1';
+export const FALLBACK_VERSION = '15.18.1';
 
 export interface DataDragonOptions {
   fetchImpl?: typeof fetch;

@@ -5,6 +5,7 @@ import { computeMatchStats } from './analysis/stats.js';
 import { extractTimelineFacts } from './analysis/timeline.js';
 import { DEMO_PUUID, DEMO_SCENARIOS } from './demoData.js';
 import { buildMatchEmbed, embedCharacterCount, DISCORD_LIMITS } from './discord/embed.js';
+import { FALLBACK_VERSION } from './riot/ddragon.js';
 
 /**
  * Mode démonstration.
@@ -52,9 +53,10 @@ async function main(): Promise<void> {
     const context = buildContext(stats, timelineFacts);
     const report = buildRuleReport(context);
 
-    // Le portrait est construit sans appel réseau : on connaît le format d'URL
-    // de Data Dragon et le mode démo n'a pas besoin de la version exacte.
-    const portraitUrl = `https://ddragon.leagueoflegends.com/cdn/15.18.1/img/champion/${stats.championPortraitName}.png`;
+    // Le portrait est construit sans appel réseau : le mode démonstration ne
+    // contacte aucun service, et la version exacte du patch n'a pas d'importance
+    // pour vérifier la mise en forme.
+    const portraitUrl = `https://ddragon.leagueoflegends.com/cdn/${FALLBACK_VERSION}/img/champion/${stats.championPortraitName}.png`;
     const embed = buildMatchEmbed({ stats, report, portraitUrl, demo: true });
 
     console.log(`\n\n### ${scenario.label}  —  ${stats.matchId}\n`);
