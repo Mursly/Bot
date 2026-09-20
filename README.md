@@ -6,6 +6,9 @@ personnalisée** destinée à l'aider à progresser.
 
 Tout est en français : commandes, messages et analyses.
 
+> 🚀 **Première installation ?** Suivez le **[guide pas à pas avec liste à cocher](INSTALLATION.md)** :
+> il reprend tout dans l'ordre, clic par clic, en 20 à 30 minutes.
+
 ---
 
 ## Sommaire
@@ -83,7 +86,7 @@ Onglet **OAuth2** → **URL Generator** :
 Ou construisez directement l'URL (remplacez `VOTRE_APPLICATION_ID`) :
 
 ```
-https://discord.com/api/oauth2/authorize?client_id=VOTRE_APPLICATION_ID&permissions=19456&scope=bot%20applications.commands
+https://discord.com/oauth2/authorize?client_id=VOTRE_APPLICATION_ID&permissions=19456&scope=bot+applications.commands
 ```
 
 `19456` correspond exactement à ces trois permissions (1024 + 2048 + 16384) —
