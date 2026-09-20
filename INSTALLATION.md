@@ -214,11 +214,19 @@ Si vous la voulez :
 
 ### 5.1 Créer le fichier `.env`
 
-Dans le dossier du projet :
+> 🚫 **À ne surtout pas faire : créer ce fichier depuis le site github.com.**
+> Le `.gitignore` ne protège que les clones locaux. Un fichier créé depuis
+> l'interface web est committé directement, `.gitignore` ou pas — vos clés
+> partiraient dans le dépôt. `.env` n'existe **que** sur la machine qui fait
+> tourner le bot, jamais sur GitHub.
+
+Dans le dossier du projet, **sur votre machine** :
 
 ```bash
 cp .env.example .env
 ```
+
+Sous Windows en `cmd` : `copy .env.example .env` (en PowerShell, `cp` fonctionne).
 
 Ouvrez `.env` dans un éditeur de texte et collez vos 4 valeurs :
 
